@@ -9,32 +9,6 @@ body {
     color: black;
 }
 
-.row {
-    margin-top: 10px;
-    height: 120px;
-    display: flex;
-}
-
-.dot {
-    position: relative;
-    left: 25%;
-    background: blue;
-    border: 2px solid rgb(30, 255, 0);
-    border-radius: 20px;
-    padding: 40px;
-    margin: 20px;
-    height: 120px;
-    width: 100px;
-}
-
-.dot:hover {
-    background: purple;
-}
-
-.dot:active {
-    background: green;
-}
-
 .homebutton {
     top: 50px;
     left: 50px;
@@ -56,6 +30,18 @@ img {
     border-radius: 10px;
     margin: 0px;
     padding: 0px;
+}
+
+.dot {
+    position: relative;
+    left: 25%;
+    background: blue;
+    border: 2px solid rgb(30, 255, 0);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 20px;
+    height: 10px;
+    width: 10px;
 }
 
 @media screen and (max-width: 980px) {

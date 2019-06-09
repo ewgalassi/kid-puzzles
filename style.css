@@ -1,6 +1,7 @@
 body {
     background-color: rgb(244, 255, 147);
     padding: 100px;
+    padding-top: 50px;
 }
 
 img {
@@ -9,7 +10,12 @@ img {
 
 a {
     font-size: 20px;
-    text-align: center;
+}
+
+br {
+    height: 10px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .jumbotron {
