@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(244, 255, 147);
+    padding: 100px;
+}
+
+img {
+    width: 300px;
+}
+
+a {
+    font-size: 20px;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: lightblue;
+}
+
+#heading {
+    font-weight: bolder !important;
+}
