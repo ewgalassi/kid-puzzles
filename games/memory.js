@@ -27,52 +27,52 @@ $(document).ready(() => {
 
     function revealPic(target) {
         if ($(target).attr("data-id") == "volcano") {
-            $(target).html("<img src='images/volcano.jpg'>");
+            $(target).html("<img src='../images/volcano.jpg'>");
             selected = "volcano";
             clicked = true;
         }
         if ($(target).attr("data-id") == "dragon") {
-            $(target).html("<img src='images/dragon.jpg'>");
+            $(target).html("<img src='../images/dragon.jpg'>");
             selected = "dragon";
             clicked = true;
         }
         if ($(target).attr("data-id") == "dinosaur") {
-            $(target).html("<img src='images/dinosaur.jpg'>");
+            $(target).html("<img src='../images/dinosaur.jpg'>");
             selected = "dinosaur";
             clicked = true;
         }
         if ($(target).attr("data-id") == "octopus") {
-            $(target).html("<img src='images/octopus.jpg'>");
+            $(target).html("<img src='../images/octopus.jpg'>");
             selected = "octopus";
             clicked = true;
         }
         if ($(target).attr("data-id") == "excavator") {
-            $(target).html("<img src='images/excavator.jpg'>");
+            $(target).html("<img src='../images/excavator.jpg'>");
             selected = "excavator";
             clicked = true;
         }
         if ($(target).attr("data-id") == "boat") {
-            $(target).html("<img src='images/boat.jpg'>");
+            $(target).html("<img src='../images/boat.jpg'>");
             selected = "boat";
             clicked = true;
         }
         if ($(target).attr("data-id") == "truck") {
-            $(target).html("<img src='images/truck.jpg'>");
+            $(target).html("<img src='../images/truck.jpg'>");
             selected = "truck";
             clicked = true;
         }
         if ($(target).attr("data-id") == "acorn") {
-            $(target).html("<img src='images/acorn.png'>");
+            $(target).html("<img src='../images/acorn.png'>");
             selected = "acorn";
             clicked = true;
         }
         if ($(target).attr("data-id") == "lego") {
-            $(target).html("<img src='images/lego.png'>");
+            $(target).html("<img src='../images/lego.png'>");
             selected = "lego";
             clicked = true;
         }
         if ($(target).attr("data-id") == "rocket") {
-            $(target).html("<img src='images/rocket.png'>");
+            $(target).html("<img src='../images/rocket.png'>");
             selected = "rocket";
             clicked = true;
         }
@@ -81,43 +81,43 @@ $(document).ready(() => {
 
     function wrongPic(target) {
         if ($(target).attr("data-id") == "volcano") {
-            $(target).html("<img src='images/volcano.jpg'>");
+            $(target).html("<img src='../images/volcano.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "dragon") {
-            $(target).html("<img src='images/dragon.jpg'>");
+            $(target).html("<img src='../images/dragon.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "dinosaur") {
-            $(target).html("<img src='images/dinosaur.jpg'>");
+            $(target).html("<img src='../images/dinosaur.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "octopus") {
-            $(target).html("<img src='images/octopus.jpg'>");
+            $(target).html("<img src='../images/octopus.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "excavator") {
-            $(target).html("<img src='images/excavator.jpg'>");
+            $(target).html("<img src='../images/excavator.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "boat") {
-            $(target).html("<img src='images/boat.jpg'>");
+            $(target).html("<img src='../images/boat.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "truck") {
-            $(target).html("<img src='images/truck.jpg'>");
+            $(target).html("<img src='../images/truck.jpg'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "acorn") {
-            $(target).html("<img src='images/acorn.png'>");
+            $(target).html("<img src='../images/acorn.png'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "lego") {
-            $(target).html("<img src='images/lego.png'>");
+            $(target).html("<img src='../images/lego.png'>");
             clicked = true;
         }
         if ($(target).attr("data-id") == "rocket") {
-            $(target).html("<img src='images/rocket.png'>");
+            $(target).html("<img src='../images/rocket.png'>");
             clicked = true;
         }
         console.log(selected);
