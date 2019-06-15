@@ -1,148 +1,67 @@
 $(document).ready(() => {
-
-    var clicked = false;
-    var selected;
-    var selected2;
-    var readyForNext = true;
     var counter = 0;
 
-
-    function revealPic(target) {
-        if ($(target).attr("data-id") == "volcano") {
-            $(target).html("<img src='images/volcano.jpg'>");
-            selected = "volcano";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "dragon") {
-            $(target).html("<img src='images/dragon.jpg'>");
-            selected = "dragon";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "dinosaur") {
-            $(target).html("<img src='images/dinosaur.jpg'>");
-            selected = "dinosaur";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "octopus") {
-            $(target).html("<img src='images/octopus.jpg'>");
-            selected = "octopus";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "excavator") {
-            $(target).html("<img src='images/excavator.jpg'>");
-            selected = "excavator";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "boat") {
-            $(target).html("<img src='images/boat.jpg'>");
-            selected = "boat";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "truck") {
-            $(target).html("<img src='images/truck.jpg'>");
-            selected = "truck";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "acorn") {
-            $(target).html("<img src='images/acorn.png'>");
-            selected = "acorn";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "lego") {
-            $(target).html("<img src='images/lego.png'>");
-            selected = "lego";
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "rocket") {
-            $(target).html("<img src='images/rocket.png'>");
-            selected = "rocket";
-            clicked = true;
-        }
-        console.log(selected);
-    };
-
-    function wrongPic(target) {
-        if ($(target).attr("data-id") == "volcano") {
-            $(target).html("<img src='images/volcano.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "dragon") {
-            $(target).html("<img src='images/dragon.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "dinosaur") {
-            $(target).html("<img src='images/dinosaur.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "octopus") {
-            $(target).html("<img src='images/octopus.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "excavator") {
-            $(target).html("<img src='images/excavator.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "boat") {
-            $(target).html("<img src='images/boat.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "truck") {
-            $(target).html("<img src='images/truck.jpg'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "acorn") {
-            $(target).html("<img src='images/acorn.png'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "lego") {
-            $(target).html("<img src='images/lego.png'>");
-            clicked = true;
-        }
-        if ($(target).attr("data-id") == "rocket") {
-            $(target).html("<img src='images/rocket.png'>");
-            clicked = true;
-        }
-        console.log(selected);
-    };
-
-    function hidePic() {
-        $("[data-id=" + selected2 + "]").empty();
-        $("[data-id=" + selected + "]").empty();
-        $("[data-id=" + selected + "]").attr("data-clicked", "false");
-    }
-
-    function clearSelected() {
-        clicked = false;
-        selected = "";
-        selected2 = "";
-        readyForNext = true;
-    }
-
     $(".dot").on("click", function () {
-        if (!clicked && readyForNext && $(this).attr("data-clicked") == "false") {
-            revealPic(this);
-            $(this).attr("data-clicked", "true");
+        var button = this.id;
+        var buttonArr = ["", "", "", ""];
+
+        switch (button[0]) {
+            case "a":
+                buttonArr.pop();
+                buttonArr.splice(1, 1, "b" + button[1]);
+                break;
+            case "e":
+                buttonArr.pop();
+                buttonArr.splice(1, 1, "d" + button[1]);
+                break;
+            case "b":
+                buttonArr.splice(1, 1, "a" + button[1]);
+                buttonArr.splice(3, 1, "c" + button[1]);
+                break;
+            case "c":
+                buttonArr.splice(1, 1, "b" + button[1]);
+                buttonArr.splice(3, 1, "d" + button[1]);
+                break;
+            case "d":
+                buttonArr.splice(1, 1, "c" + button[1]);
+                buttonArr.splice(3, 1, "e" + button[1]);
+                break;
         }
-        else if (clicked && readyForNext && $(this).attr("data-clicked") == "false") {
-            if ($(this).attr("data-id") != selected) {
-                selected2 = $(this).attr("data-id");
-                wrongPic(this);
-                readyForNext = false;
-                setTimeout(hidePic, 1200);
-                setTimeout(clearSelected, 1220);
-            }
-            else {
-                revealPic(this);
-                $(this).attr("data-clicked", "true");
-                clicked = false;
-                selected = "";
-                selected2 = "";
-                counter++;
-                if (counter === 10) {
-                    alert("You won!");
-                    location.reload();
-                }
-            }
+
+        switch (button[1]) {
+            case "1":
+                buttonArr.shift();
+                buttonArr.splice(1, 1, button[0] + "2");
+                break;
+            case "5":
+                buttonArr.shift();
+                buttonArr.splice(1, 1, button[0] + "4");
+                break;
+            case "2":
+                buttonArr.splice(0, 1, button[0] + "1");
+                buttonArr.splice(2, 1, button[0] + "3");
+                break;
+            case "3":
+                buttonArr.splice(0, 1, button[0] + "2");
+                buttonArr.splice(2, 1, button[0] + "4");
+                break;
+            case "4":
+                buttonArr.splice(0, 1, button[0] + "3");
+                buttonArr.splice(2, 1, button[0] + "5");
+                break;
         }
+
+        this.classList.toggle("selected");
+
+        for (num in buttonArr) {
+            document.getElementById(buttonArr[num]).classList.toggle("selected");
+        };
+
+        setTimeout(function() {
+                if (document.querySelectorAll(".selected").length === 25) {
+                    alert("You win!");
+                };
+        }, 200)
+        
     });
 });
